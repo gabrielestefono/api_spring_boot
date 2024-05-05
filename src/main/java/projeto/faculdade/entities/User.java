@@ -1,8 +1,9 @@
-package entities;
+package projeto.faculdade.entities;
 
 import java.io.Serializable;
 import java.util.Objects;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
@@ -10,7 +11,8 @@ import jakarta.persistence.Table;
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private String id;
+	@Id
+	private Long id;
 	private String nome;
 	private String email;
 	private String telefone;
@@ -19,7 +21,7 @@ public class User implements Serializable {
 	public User() {
 	}
 
-	public User(String id, String nome, String email, String telefone, String password) {
+	public User(Long id, String nome, String email, String telefone, String password) {
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
@@ -27,11 +29,11 @@ public class User implements Serializable {
 		this.password = password;
 	}
 
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

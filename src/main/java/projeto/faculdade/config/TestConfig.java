@@ -1,11 +1,11 @@
-package config;
+package projeto.faculdade.config;
 
 import java.util.Arrays;
 
 import org.springframework.boot.CommandLineRunner;
 
-import entities.User;
-import repositories.UserRepository;
+import projeto.faculdade.entities.User;
+import projeto.faculdade.repositories.UserRepository;
 
 public class TestConfig implements CommandLineRunner {
 	private final UserRepository userRepository;
